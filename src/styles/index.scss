@@ -1,0 +1,96 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /*background: #aba3c9;*/
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+#root {
+  height: 100vh;
+}
+
+$colorRed: #f04b31;
+$colorRedHover: #c03c27;
+$colorRedHoverSuperLight: #c03c2738;
+$colorGray: #3e474c;
+$colorGrayLight: #666;
+
+// Custom styles for Amplify login view
+.login-view {
+
+  height: 100%;
+
+  .login-header {
+    margin-top: -100px;
+    .logo {
+      margin-left: -22px;
+    }
+  }
+
+  .amplify-tabs-item[data-state=active]{
+    border-color: $colorRed;
+    color: $colorGray;
+  }
+  .amplify-tabs-item:hover {
+    color: $colorGrayLight;
+  }
+
+
+  .amplify-button{
+    &[type=submit] {
+      background: $colorRed;
+      border-color: $colorRed;
+
+      &:hover {
+        background-color: $colorRedHover;
+        border-color: $colorRedHover;
+      }
+    }
+    &[data-size=small] { // Forgot password
+      color: $colorGray;
+      &:hover {
+        background: $colorRedHoverSuperLight
+      }
+    }
+  }
+  .amplify-field__show-password {
+    &:hover {
+      background: $colorRedHoverSuperLight;
+      border-color: $colorRedHoverSuperLight;
+    }
+  }
+}
+
+.date-picker-d256 {
+  .day-label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 23px;
+    height: 23px;
+    border-radius: 8px;
+    padding: 10px;
+    color: $colorRed;
+    position: relative;
+    left: 18px;
+
+    &.loaded {
+      border: 1px solid $colorRed;;
+    }
+
+    &.loaded-full {
+      border: 1px solid $colorRed;;
+      background: $colorRed;
+      color: white;
+    }
+  }
+}

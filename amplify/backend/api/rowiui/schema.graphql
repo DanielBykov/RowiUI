@@ -1,0 +1,33 @@
+################### new ##################
+type RowiUIDash @model @auth(rules: [{allow: owner}, {allow: private, operations: [read]}]) {
+  id: ID!
+  name: String
+  logo: String
+  emailOwner: String
+  RowiUIDevices: [RowiUIDevice] @hasMany(indexName: "byRowiUIDash", fields: ["id"])
+  RowiUIDashViewers: [RowiUIDashViewer] @hasMany(indexName: "byRowiUIDash", fields: ["id"])
+}
+
+type RowiUIDevice @model @auth(rules: [{allow: owner}, {allow: private, operations: [read]}]) {
+  id: ID!
+  name: String
+  deviceID: String
+  rowiuidashID: ID! @index(name: "byRowiUIDash")
+}
+
+type RowiUIDashViewer @model @auth(rules: [{allow: owner}, {allow: private, operations: [read]}]) {
+  id: ID!
+  name: String
+  email: String @index(name: "byEmail", queryField: "viewerByEmail")
+  status: Boolean # ??? String [active, inactive, invited]
+  role: String # editor, viewer
+  rowiuidashID: ID! @index(name: "byRowiUIDash")
+}
+
+# Users data (name, phone, email? etc.)
+type RowiUIUser @model @auth(rules: [{allow: owner}, {allow: private, operations: [read]}]) {
+  id: ID! # sub
+  name: String
+  email: String
+  RowiUIDash: RowiUIDash @hasOne
+}
