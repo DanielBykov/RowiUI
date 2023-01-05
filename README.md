@@ -1,6 +1,12 @@
-# Getting Started with Create React App
+# Rowi UI
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a web platform for monitoring and analysing history data of IoT Rowi devices.
+
+Live demo link [http://master.dddd.cc]()
+Login: demo@rowi.co.nz
+Password: Rowidemo256
+
+
 
 ## Available Scripts
 
