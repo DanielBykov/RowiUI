@@ -2,18 +2,6 @@
 
 A real-time dashboard for monitoring and analyzing historical data from your IoT Rowi devices.
 
-## ✨ Live Demo
-
-You can explore a live version of the dashboard hosted on AWS Amplify.
-
-**[➡️ Rowi Demo Dashboard](https://rowi-ui-demo.d2h4o5vcc7ap9e.amplifyapp.com/)**
-
-> Use the following credentials for access:
-> **Login:** `demo@rowi.co.nz`
-> **Password:** `Rowidemo256`
-
-*Note: The demo database contains sample data. For the best experience, try filtering the timeline to **January 2023** to see populated charts.*
-
 ## 🚀 Features
 
 - **Multi-Device Dashboard**: Add and monitor multiple Rowi devices from a single interface.
